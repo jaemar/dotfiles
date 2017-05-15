@@ -36,6 +36,7 @@ au BufRead,BufNewFile *.* nmap <leader>hh :noh<CR>
 au BufRead,BufNewFile *.* nmap <leader><space> ;c<Space>
 " Open folded shit
 au BufRead,BufNewFile *.* nmap <leader><space> ;c<Space>
+" Copy to clipboard
 au BufRead,BufNewFile *.* nmap <F1> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 au BufRead,BufNewFile *.* imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 au BufRead,BufNewFile *.* nmap <leader>y :.w !pbcopy<CR><CR>
