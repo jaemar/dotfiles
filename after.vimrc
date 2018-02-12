@@ -2,11 +2,11 @@ let mapleader = ";"
 set relativenumber
 set mouse=a
 set wrap
-set et sts=0 sw=2 ts=2
+" set et sts=0 sw=2 ts=2
 
 autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
-au BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
+" autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+" au BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
 
 au InsertEnter * :set number
 au InsertEnter * :inoremap jj <ESC>
