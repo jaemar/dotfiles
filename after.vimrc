@@ -43,14 +43,13 @@ au BufRead,BufNewFile *.* nmap <leader>y :.w !pbcopy<CR><CR>
 au BufRead,BufNewFile *.* vmap <leader>y :w !pbcopy<CR><CR>
 
 
-
-
 " Neovim
 set nocompatible
 filetype on
 filetype off
 
 let mapleader = ";"
+
 
 call plug#begin('~/.local/share/nvim/plugged')
 " call plug#begin('~/.vim/plugged')
@@ -76,6 +75,8 @@ Plug 'mxw/vim-jsx'
 " Syntax
 Plug 'neomake/neomake'
 
+" golden ratio
+Plug 'roman/golden-ratio'
 call plug#end()
 
 " General
@@ -157,3 +158,8 @@ inoremap <s-tab> <c-n>
 autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd! BufWritePost * Neomake
 au BufNewFile,BufRead *.gradle setf groovy
+au BufRead,BufNewFile *.* set relativenumber
+
+au InsertEnter * :set number
+au InsertEnter * :inoremap jj <ESC>
+au! InsertLeave * :set relativenumber
